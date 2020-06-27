@@ -1,4 +1,4 @@
-package jupiterpa.util;
+package jupiterpa.test;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.LoggerFactory;

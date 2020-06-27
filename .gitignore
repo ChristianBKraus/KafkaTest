@@ -1,1 +1,2 @@
-/target/classes/jupiterpa/Application.class
+/target/*
+/.idea/*
