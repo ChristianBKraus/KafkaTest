@@ -24,7 +24,7 @@ public class TestTransform {
         KStream<String,TestData> stream = kStreamBuilder.stream("myTopic");
 
         stream
-                .mapValues( v -> new TestData(v.getId(),v.getName() + "_T") )
+                .mapValues( v -> new TestData(v.getId(),v.getName() + "_TT") )
                 .peek( (k,v) -> System.out.println("Transform: " + v.getName()) )
                 .to("myOtherTopic");
 
