@@ -1,7 +1,7 @@
 package jupiterpa.test;
 
 import jupiterpa.model.TestData;
-import jupiterpa.util.TransformUtil;
+import jupiterpa.util.TransformConfig;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.kstream.KStream;
 import org.springframework.context.annotation.Bean;
@@ -15,7 +15,7 @@ public class TestTransform {
 
     @Bean(name = KafkaStreamsDefaultConfiguration.DEFAULT_STREAMS_CONFIG_BEAN_NAME)
     public KafkaStreamsConfiguration kStreamsConfigs() {
-        return TransformUtil.defaultConfig("testStreams", new JsonSerde<>(TestData.class));
+        return TransformConfig.defaultConfig("testStreams", new JsonSerde<>(TestData.class));
     }
 
     @Bean

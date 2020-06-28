@@ -18,7 +18,7 @@ import java.util.Map;
 @Configuration
 @EnableKafka
 @EnableKafkaStreams
-public class TransformUtil {
+public class TransformConfig {
 
     public static KafkaStreamsConfiguration defaultConfig(String application_id, JsonSerde<?> jsonSerde) {
         Map<String, Object> props = new HashMap<>();
